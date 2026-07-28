@@ -1,2 +1,3 @@
-# alu-system_engineering-devops
-intranet-sem_3
+# ALU System Engineering & DevOps
+
+This repository contains projects and exercises for the System Engineering & DevOps curriculum at ALU.
