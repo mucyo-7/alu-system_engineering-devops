@@ -4,5 +4,7 @@
 apt-get update -y
 apt-get install -y nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sed -i "/listen 80 default_server;/a\\ add_header X-Served-By \$hostname;" /etc/nginx/sites-enabled/default
+if ! grep -q "add_header X-Served-By" /etc/nginx/sites-enabled/default; then
+    sed -i "/listen 80 default_server;/a\\ add_header X-Served-By \$hostname;" /etc/nginx/sites-enabled/default
+fi
 service nginx restart
